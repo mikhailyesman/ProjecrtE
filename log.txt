@@ -1,0 +1,11 @@
+commit d72c38931d658524682e6f824299bad56d0f10e9
+Author: mikhailyesman <mikhailyesman@gmail.com>
+Date:   Thu Feb 4 22:27:23 2021 +0300
+
+    add status.txt
+
+commit 59e3f87d77cd89da6c1081a5a10a81aef1e92646
+Author: mikhailyesman <43871862+mikhailyesman@users.noreply.github.com>
+Date:   Thu Feb 4 21:52:46 2021 +0300
+
+    Initial commit
