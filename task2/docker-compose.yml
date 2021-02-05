@@ -1,0 +1,54 @@
+version: "3.9"
+
+services:
+  nginx:
+      image: mikhailyesman/repo-my-webservice
+      ports:
+        - "8080-8084:80"
+      deploy:
+        replicas: 5
+
+  java_app:
+    image: tomcat
+    ports:
+      - "8085:8080"
+    depends_on:
+      - database
+  database:
+    image: postgres
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+docker-compose.yml[+] [unix] (10:02 05/02/2021)                                                                                                                                     18,12 Весь
+-- ВСТАВКА --
+
+    ports:
+      - 8085:8080
+
+   
+  
