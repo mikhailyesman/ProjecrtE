@@ -1,0 +1,22 @@
+node {
+    def remote = [:]
+    remote.name = 'ssh'
+    remote.host = '192.168.0.3'
+    remote.allowAnyHosts = true
+    
+    stage('Var'){
+		withCredentials([
+            usernamePassword(credentialsId: 'd2fb3c47-bc53-4510-8a50-57fc2bcd88ab', passwordVariable: 'password', usernameVariable: 'username')]) {
+            remote.user = username
+            remote.password = password
+            }
+    }
+    stage('Remote SSH') {
+            sshCommand remote: remote, command: "sudo docker ps"
+            sshCommand remote: remote, command: "git clone https://github.com/mikhailyesman/ProjecrtE.git"
+            sshCommand remote: remote, command: "cd /home/vagrant/ProjecrtE/task2"
+            sshCommand remote: remote, command: "sudo docker build -t smeswebserver ."
+            sshCommand remote: remote, command: "sudo docker run -it --rm -d -p 8080:80 --name web smeswebserver"
+            sshCommand remote: remote, command: "sudo docker ps"
+    }
+}
