@@ -1,0 +1,17 @@
+node('server') {
+	stage('clone') {
+		sh 'sudo docker ps'
+		sleep 3
+		sh "pwd"
+		sh "cd /home/vagrant/workspace/pipline_server"
+		sh "sudo git clone https://github.com/mikhailyesman/ProjecrtE.git"
+		sh "cd /home/vagrant/workspace/pipline_server/ProjecrtE/task2"
+		sh "cp -r /home/vagrant/workspace/pipline_server/ProjecrtE/task2/. /home/vagrant/workspace/pipline_server/"
+		sh "cd /home/vagrant/"
+		sh "sudo docker build -t smeswebserver ."
+		sh 'sudo docker run -it --rm -d -p 8080:80 smeswebserver'
+		sh 'sudo docker ps' 
+		sh "cd /home/vagrant/"
+		sh "sudo rm -rf workspace"
+	}
+}
