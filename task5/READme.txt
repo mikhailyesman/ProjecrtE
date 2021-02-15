@@ -12,6 +12,7 @@ SHOW TABLES;
 SHOW MASTER STATUS;
 DROP TABLE Result;
 SHOW DATABASES;
+SHOW SLAVE STATUS\G;
 
 **********************************************************************************************************************
 GRANT REPLICATION SLAVE ON . TO 'smes_rep'@'%' IDENTIFIED BY 'smes'; FLUSH PRIVILEGES;
