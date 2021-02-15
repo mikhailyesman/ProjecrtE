@@ -9,7 +9,7 @@ db.Students.insertMany ([
   { "Student": "Sheronov Ivan Petrovich", "StudentID": 5},
   { "Student": "Gavrish Oleg Nikolaevich", "StudentID": 6},
   { "Student": "Demyankov Vladislav Vitalievich", "StudentID": 7},
-  { "hagsaeng": "Pekhotskiy Yuri Vasilievich", "StudentID": 8},
+  { "Student": "Pekhotskiy Yuri Vasilievich", "StudentID": 8},
   { "Student": "Sherstyuk Vadim Alexandrovich", "StudentID": 9},
   { "Student": "Kazimirov Sergey Anatolyevich", "StudentID": 10},
   { "Student": "Nazarov Pavel Andreevich", "StudentID": 11},
@@ -20,7 +20,6 @@ db.Students.insertMany ([
   { "Student": "Alexey Viktorovich Nalivaiko", "StudentID": 17},
   { "Student": "Alexander Borisovich Chekh", "StudentID": 18}
   { "Student": "Yesman Mikhail Mikhailovich", "StudentID": 19},
-
  ])
 
 db.createCollection("Result")
