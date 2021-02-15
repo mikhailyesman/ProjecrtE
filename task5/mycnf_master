@@ -1,0 +1,11 @@
+!includedir /etc/mysql/conf.d/
+!includedir /etc/mysql/mysql.conf.d/
+
+[mysqld]
+
+server-id = 1
+log_bin = /var/log/mysql/mysql-bin.log
+log_error=mysql-bin.err
+binlog_do_db=db_group
+master_info_repository = TABLE
+relay_log_info_repository = TABLE
