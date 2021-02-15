@@ -1,5 +1,4 @@
 use db_group
-
 db.createCollection("Students")
 db.Students.insertMany ([
   { "Student": "Razhabov Damir Sharofovich", "StudentID": 1},
@@ -21,7 +20,6 @@ db.Students.insertMany ([
   { "Student": "Alexander Borisovich Chekh", "StudentID": 18}
   { "Student": "Yesman Mikhail Mikhailovich", "StudentID": 19},
  ])
-
 db.createCollection("Result")
 db.Result.insertMany ([
   {"StudentID":1,"Task1":"pass","Task2":"pass","Task3":"pass","Task4":"pass"},
