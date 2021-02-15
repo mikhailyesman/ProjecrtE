@@ -5,15 +5,18 @@ docker exec -u root -t -i 60410df87a5f /bin/bash
 service mysql restart
 mysql -u smes -p -h 192.168.10.66 -P 3307
 
+**********************************************************************************************************************
 MYSQL:
+**********************************************************************************************************************
 SHOW TABLES;
 SHOW MASTER STATUS;
 DROP TABLE Result;
 SHOW DATABASES;
 
+**********************************************************************************************************************
 GRANT REPLICATION SLAVE ON . TO 'smes_rep'@'%' IDENTIFIED BY 'smes'; FLUSH PRIVILEGES;
-
-
+FLUSH PRIVILEGES;
+**********************************************************************************************************************
 RESET MASTER;
 CHANGE MASTER TO MASTER_HOST='192.168.10.55', MASTER_PORT=3307, MASTER_USER='smesrep', MASTER_PASSWORD='smes'; SHOW SLAVE STATUS\G;
 STOP SLAVE;
