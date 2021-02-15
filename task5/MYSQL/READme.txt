@@ -30,6 +30,6 @@ CHANGE MASTER TO MASTER_HOST='192.168.10.55', MASTER_PORT=3307, MASTER_USER='sme
 STOP SLAVE;
 START SLAVE;
 
-
+https://www.2ndquadrant.com/en/blog/using-docker-hub-postgresql-images/
 
 
