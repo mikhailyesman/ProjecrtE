@@ -1,0 +1,17 @@
+!includedir /etc/mysql/conf.d/
+!includedir /etc/mysql/mysql.conf.d/
+
+[mysqld]
+
+server-id=2
+
+master_info_repository = TABLE
+relay_log_info_repository = TABLE
+
+relay-log = /var/log/mysql/mysql-relay-bin.log
+
+
+log_bin = /var/log/mysql/mysql-bin.log
+
+
+binlog_do_db = db_group
