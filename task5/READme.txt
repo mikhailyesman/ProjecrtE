@@ -13,6 +13,9 @@ SHOW MASTER STATUS;
 DROP TABLE Result;
 SHOW DATABASES;
 SHOW SLAVE STATUS\G;
+SELECT MEMBER_ID, MEMBER_HOST, MEMBER_STATE FROM performance_schema.replication_group_members;
+START GROUP_REPLICATION;
+
 
 **********************************************************************************************************************
 GRANT REPLICATION SLAVE ON . TO 'smes_rep'@'%' IDENTIFIED BY 'smes'; FLUSH PRIVILEGES;
