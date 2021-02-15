@@ -22,7 +22,7 @@ START GROUP_REPLICATION;
 
 
 **********************************************************************************************************************
-GRANT REPLICATION SLAVE ON . TO 'smes_rep'@'%' IDENTIFIED BY 'smes'; FLUSH PRIVILEGES;
+GRANT REPLICATION SLAVE ON . TO 'smesrep'@'%' IDENTIFIED BY 'smes'; FLUSH PRIVILEGES;
 FLUSH PRIVILEGES;
 **********************************************************************************************************************
 RESET MASTER;
