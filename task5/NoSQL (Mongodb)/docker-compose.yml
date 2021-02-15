@@ -1,0 +1,41 @@
+version: "3.1"
+
+volumes:
+  mongo_master:
+  mongo_slave:
+  mongo_arbiter:
+
+services:
+  master:
+    image: mongo
+    container_name: master
+    hostname: master
+
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: smes
+      MONGO_INITDB_ROOT_PASSWORD: smes
+    volumes:
+      - /opt/mongodb/database:/data/db
+
+  slave:
+    image: mongo
+    container_name: slave
+    hostname: slave
+
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: smes
+      MONGO_INITDB_ROOT_PASSWORD: smes
+    volumes:
+      - mongo_slave:/var/lib/mongodb
+
+  arbiter:
+    image: mongo
+    container_name: arbiter
+    hostname: arbiter
+
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: smes
+      MONGO_INITDB_ROOT_PASSWORD: smes
+      
+    volumes:
+      - mongo_arbiter:/var/lib/mongodb

@@ -1,0 +1,5 @@
+var result = [];
+
+db.Students.find({Student: "Yesman Mikhail Mikhailovich"}, {_id: 0, Student: 0}).forEach(function(u) {result.push(u.StudentID) });
+
+db.Result.find({StudentID: parseInt(result, 10)});
