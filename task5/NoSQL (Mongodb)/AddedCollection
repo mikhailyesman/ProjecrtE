@@ -1,0 +1,46 @@
+use db_group
+
+db.createCollection("Students")
+db.Students.insertMany ([
+  { "Student": "Razhabov Damir Sharofovich", "StudentID": 1},
+  { "Student": "Sivozhelezov Sergey Vladimirovich", "StudentID": 2},
+  { "Student": "Dmitry Alexandrovich Chesnyuk", "StudentID": 3},
+  { "Student": "Matskevich Andrey Anatolyevich", "StudentID": 4},
+  { "Student": "Sheronov Ivan Petrovich", "StudentID": 5},
+  { "Student": "Gavrish Oleg Nikolaevich", "StudentID": 6},
+  { "Student": "Demyankov Vladislav Vitalievich", "StudentID": 7},
+  { "hagsaeng": "Pekhotskiy Yuri Vasilievich", "StudentID": 8},
+  { "Student": "Sherstyuk Vadim Alexandrovich", "StudentID": 9},
+  { "Student": "Kazimirov Sergey Anatolyevich", "StudentID": 10},
+  { "Student": "Nazarov Pavel Andreevich", "StudentID": 11},
+  { "Student": "Igor Olegovich Shatrov", "StudentID": 12},
+  { "Student": "Nikolsky Valery Alexandrovich", "StudentID": 13},
+  { "Student": "Gurin Sergey Vladimirovich", "StudentID": 14},
+  { "Student": "Dmitry Alekseevich Kuzin", "StudentID": 16},
+  { "Student": "Alexey Viktorovich Nalivaiko", "StudentID": 17},
+  { "Student": "Alexander Borisovich Chekh", "StudentID": 18}
+  { "Student": "Yesman Mikhail Mikhailovich", "StudentID": 19},
+
+ ])
+
+db.createCollection("Result")
+db.Result.insertMany ([
+  {"StudentID":1,"Task1":"pass","Task2":"pass","Task3":"pass","Task4":"pass"},
+  {"StudentID":2,"Task1":"pass","Task2":"pass","Task3":"pass","Task4":""},
+  {"StudentID":3,"Task1":"pass","Task2":"pass","Task3":"pass","Task4":"pass"},
+  {"StudentID":4,"Task1":"pass","Task2":"pass","Task3":"not passed","Task4":""},
+  {"StudentID":5,"Task1":"pass","Task2":"pass","Task3":"not passed","Task4":""},
+  {"StudentID":6,"Task1":"pass","Task2":"pass","Task3":"not passed","Task4":""},
+  {"StudentID":7,"Task1":"pass","Task2":"not passed","Task3":"not passed","Task4":""},
+  {"StudentID":8,"Task1":"pass","Task2":"pass","Task3":"pass","Task4":"pass"},
+  {"StudentID":9,"Task1":"pass","Task2":"not passed","Task3":"not passed","Task4":""},
+  {"StudentID":10,"Task1":"pass","Task2":"pass","Task3":"pass","Task4":"pass"},
+  {"StudentID":11,"Task1":"pass","Task2":"pass","Task3":"pass","Task4":"pass"},
+  {"StudentID":12,"Task1":"pass","Task2":"pass","Task3":"pass","Task4":"pass"},
+  {"StudentID":13,"Task1":"pass","Task2":"not passed","Task3":"not passed","Task4":""},
+  {"StudentID":14,"Task1":"pass","Task2":"pass","Task3":"pass","Task4":"pass"},
+  {"StudentID":16,"Task1":"pass","Task2":"not passed","Task3":"not passed","Task4":""},
+  {"StudentID":17,"Task1":"pass","Task2":"pass","Task3":"pass","Task4":""},
+  {"StudentID":19,"Task1":"pass","Task2":"pass","Task3":"pass","Task4":"pass"},
+  {"StudentID":18,"Task1":"pass","Task2":"pass","Task3":"pass","Task4":""}
+])
