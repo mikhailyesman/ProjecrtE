@@ -7,3 +7,5 @@ mysql -u smes -p -h 192.168.10.66 -P 3307
 
 MYSQL:
 SHOW TABLES;
+SHOW MASTER STATUS;
+
