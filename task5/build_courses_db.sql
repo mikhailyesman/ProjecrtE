@@ -1,5 +1,5 @@
-CREATE DATABASE Courses;
-USE Courses;
+CREATE DATABASE db_group;
+USE db_group;
 
 CREATE TABLE Students (
   ID int NOT NULL,
@@ -8,32 +8,32 @@ CREATE TABLE Students (
   PRIMARY KEY (ID)
 );
 INSERT INTO Students (ID, Student, StudentID) VALUES
-(1, 'Ражабов Дамир Шарофович', 1),
-(2, 'Сивожелезов Сергей Владимирович', 2),
-(3, 'Чеснюк Дмитрий Александрович', 3),
-(4, 'Мацкевич Андрей Анатольевич', 4),
-(5, 'Шеронов Иван Петрович', 5),
-(6, 'Гавриш Олег Николаевич', 6),
-(7, 'Демьянков Владислав Витальевич', 7),
-(8, 'Пехоцкий Юрий Васильевич', 8),
-(9, 'Шерстюк Вадим Александрович', 9),
-(10, 'Казимиров Сергей Анатольевич', 10),
-(11, 'Назаров Павел Андреевич', 11),
-(12, 'Шатров Игорь Олегович', 12),
-(13, 'Никольский Валерий Александрович', 13),
-(14, 'Гурин Сергей Владимирович', 14),
-(15, 'Кузин Дмитрий Алексеевич', 16),
-(16, 'Наливайко Алексей Викторович', 17),
-(17, 'Чех Александр Борисович', 18),
-(18, 'Есьман Михаил Михайлович', 19);
+(1, 'Razhabov Damir SHarofovich', 1),
+(2, 'Sivozhelezov Sergej Vladimirovich', 2),
+(3, 'CHesnyuk Dmitrij Aleksandrovich', 3),
+(4, 'Mackevich Andrej Anatolevich', 4),
+(5, 'SHeronov Ivan Petrovich', 5),
+(6, 'Gavrish Oleg Nikolaevich', 6),
+(7, 'Demyankov Vladislav Vitalevich', 7),
+(8, 'Pekhockij YUrij Vasilevich', 8),
+(9, 'SHerstyuk Vadim Aleksandrovich', 9),
+(10, 'Kazimirov Sergej Anatolevich', 10),
+(11, 'Nazarov Pavel Andreevich', 11),
+(12, 'SHatrov Igor Olegovich', 12),
+(13, 'Nikolskij Valerij Aleksandrovich', 13),
+(14, 'Gurin Sergej Vladimirovich', 14),
+(15, 'Kuzin Dmitrij Alekseevich', 16),
+(16, 'Nalivajko Aleksej Viktorovich', 17),
+(17, 'CHekh Aleksandr Borisovich', 18),
+(18, 'Yesman Mikhail Mihajlovich', 19);
 
 CREATE TABLE Result (
   ID int NOT NULL,
   StudentID int NOT NULL,
-  Task1 nvarchar(128) DEFAULT NULL,
-  Task2 nvarchar(128) DEFAULT NULL,
-  Task3 nvarchar(128) DEFAULT NULL,
-  Task4 nvarchar(128) DEFAULT NULL,
+  Task1 VARCHAR(16) DEFAULT NULL,
+  Task2 VARCHAR(16) DEFAULT NULL,
+  Task3 VARCHAR(16) DEFAULT NULL,
+  Task4 VARCHAR(16) DEFAULT NULL,
   PRIMARY KEY (ID)
 );
 INSERT INTO Result (ID, StudentID, Task1, Task2, Task3, Task4) VALUES
