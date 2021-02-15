@@ -1,0 +1,30 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql:5.7
+
+    container_name: "mysql_slave"
+
+    restart: always
+    
+    environment:
+      MYSQL_ROOT_PASSWORD: smes
+      MYSQL_DATABASE: db_group
+      MYSQL_USER: smes
+      MYSQL_PASSWORD: smes
+    ports:
+      - 3307:3306
+      - 33071:33061
+      - 33070:33060
+    network_mode: "bridge"
+    volumes:
+      - /opt/mysql/mysql_db:/var/lib/mysql 
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8090:80
+    environment:
+      - PMA_ARBITRARY=1
